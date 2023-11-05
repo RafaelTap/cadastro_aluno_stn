@@ -19,9 +19,6 @@ public class Aluno {
 	private String nome;
 
 	@Column
-	private int idade;
-
-	@Column
 	private String cpf;
 
 	@Column
@@ -47,14 +44,6 @@ public class Aluno {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public int getIdade() {
-		return idade;
-	}
-
-	public void setIdade(int idade) {
-		this.idade = idade;
 	}
 
 	public String getCpf() {
