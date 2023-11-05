@@ -3,16 +3,36 @@ package com.outlook.rafael_taparica.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(schema = "cadastro_aluno_stn")
 public class Aluno implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+	@Id
 	int idAluno;
+	
+	@Column
 	String nome;
+	
+	@Column
 	int idade;
+	
+	@Column
 	String cpf;
+	
+	@Column
 	String email;
+	
+	@Column
 	String telefone;
+	
+	@Column
 	Date dataNascimento;
 
 	public int getIdAluno() {
