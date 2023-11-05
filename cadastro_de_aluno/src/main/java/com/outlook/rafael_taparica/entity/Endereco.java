@@ -33,6 +33,9 @@ public class Endereco {
 	@Column
 	private String UF;
 
+	@Column
+	int aluno_idAluno;
+
 	public int getIdEndereco() {
 		return idEndereco;
 	}
@@ -88,5 +91,15 @@ public class Endereco {
 	public void setUF(String uF) {
 		UF = uF;
 	}
+
+	public int getAluno_idAluno() {
+		return aluno_idAluno;
+	}
+
+	public void setAluno_idAluno(int aluno_idAluno) {
+		this.aluno_idAluno = aluno_idAluno;
+	}
+	
+	
 
 }
