@@ -1,10 +1,10 @@
 package com.outlook.rafael_taparica.entity;
 
 import java.io.Serializable;
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -15,25 +15,26 @@ public class Aluno implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	int idAluno;
+	@GeneratedValue
+	private int idAluno;
 	
 	@Column
-	String nome;
+	private String nome;
 	
 	@Column
-	int idade;
+	private int idade;
 	
 	@Column
-	String cpf;
+	private String cpf;
 	
 	@Column
-	String email;
+	private String email;
 	
 	@Column
-	String telefone;
+	private String telefone;
 	
 	@Column
-	Date dataNascimento;
+	private  String dataNascimento;
 
 	public int getIdAluno() {
 		return idAluno;
@@ -83,12 +84,12 @@ public class Aluno implements Serializable {
 		this.telefone = telefone;
 	}
 
-	public Date getDataNascimento() {
+	public String getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(Date dataNascimento) {
-		this.dataNascimento = dataNascimento;
+	public void setDataNascimento(String dataNascimento2) {
+		this.dataNascimento = dataNascimento2;
 	}
 
 }

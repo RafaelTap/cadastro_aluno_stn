@@ -5,40 +5,48 @@ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org
 
 	<persistence-unit name="cadastro_de_aluno">
 	
+	<!-- classes -->
+	
 	<class>com.outlook.rafael_taparica.entity.Aluno</class>
    <class>com.outlook.rafael_taparica.entity.Endereco</class>
    <class>com.outlook.rafael_taparica.entity.Responsavel</class>
    
    <properties>
    
+   <!-- configurações do hibernate-->
+    <property
+     name="hibernate.dialect"
+     value="org.hibernate.dialect.MySQLDialect"/>
+     
    <property 
-   name = "hibernate.hbm2dd1.auto"
-   value = "update"/>
+   name="hibernate.hbm2ddl.auto"
+   value="update"/>
+
+    <property 
+    name="hibernate.show_sql" 
+    value="true"/>
     
     <property
     name = "hibernate.format_sql"
     value = "true"/>
     
-    <property
-     name="hibernate.dialect"
-     value="org.hibernate.dialect.MySQLDialect"/>
+     <!-- configuração de conexão-->
      
     <property
-     name="hibernate.connection.driver_class"
-     value="com.mysql.jdbc.Driver"/>
-     
-    <property
-     name="hibernate.connection.url"
+     name="javax.persistence.jdbc.url"
      value="jdbc:mysql://localhost/cadastro_aluno_stn"/>
      
     <property
-     name="hibernate.connection.username"
+     name="javax.persistence.jdbc.user"
      value="root"/>
      
     <property
-     name="hibernate.connection.password"
+     name="javax.persistence.jdbc.password"
      value="dev@123"/>
      
+    <property
+     name="javax.persistence.jdbc.driver"
+     value="com.mysql.cj.jdbc.Driver"/>
     </properties>
 	
 	</persistence-unit>

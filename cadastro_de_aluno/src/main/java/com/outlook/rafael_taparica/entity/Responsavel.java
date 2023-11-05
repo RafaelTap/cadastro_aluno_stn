@@ -18,19 +18,19 @@ public class Responsavel implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = AUTO)
-	int idResponsavel;
+	private int idResponsavel;
 	
 	@Column
-	String nome;
+	private String nome;
 	
 	@Column
-	String cpf;
+	private String cpf;
 	
 	@Column
-	String email;
+	private String email;
 	
 	@Column
-	String telefone;
+	private String telefone;
 
 	public int getIdResponsavel() {
 		return idResponsavel;

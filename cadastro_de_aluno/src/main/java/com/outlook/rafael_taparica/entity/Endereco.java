@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
+import static javax.persistence.GenerationType.AUTO;
 
 @Entity
 @Table(schema = "cadastro_aluno_stn")
@@ -14,24 +16,26 @@ public class Endereco implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	int idEndereco;
+	@GeneratedValue(strategy = AUTO)
+	private int idEndereco;
 	
 	@Column
-	String logradouro;
-	@Column
-	int numero;
+	private String logradouro;
 	
 	@Column
-	String cep;
+	private int numero;
 	
 	@Column
-	String complemento;
+	private String cep;
 	
 	@Column
-	String cidade;
+	private String complemento;
 	
 	@Column
-	String UF;
+	private String cidade;
+	
+	@Column
+	private String UF;
 
 	public int getIdEndereco() {
 		return idEndereco;
