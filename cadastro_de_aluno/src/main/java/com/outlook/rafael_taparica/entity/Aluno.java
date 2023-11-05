@@ -1,40 +1,37 @@
 package com.outlook.rafael_taparica.entity;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(schema = "cadastro_aluno_stn")
-public class Aluno implements Serializable {
-
-	private static final long serialVersionUID = 1L;
+@Table(name = "aluno")
+public class Aluno {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idAluno;
-	
+
 	@Column
 	private String nome;
-	
+
 	@Column
 	private int idade;
-	
+
 	@Column
 	private String cpf;
-	
+
 	@Column
 	private String email;
-	
+
 	@Column
 	private String telefone;
-	
+
 	@Column
-	private  String dataNascimento;
+	private String dataNascimento;
 
 	public int getIdAluno() {
 		return idAluno;

@@ -12,11 +12,10 @@ public class Helper {
 		this.em = em;
 	}
 
-	public String adicionarAluno(int idAluno, String nome, int idade, String cpf, String email, String telefone,
+	public String adicionarAluno(String nome, int idade, String cpf, String email, String telefone,
 			String dataNascimento) {
 
 		Aluno aluno = new Aluno();
-		aluno.setIdAluno(idAluno);
 		aluno.setNome(nome);
 		aluno.setIdade(idade);
 		aluno.setCpf(cpf);
@@ -28,7 +27,8 @@ public class Helper {
 		em.persist(aluno);
 		em.getTransaction().commit();
 
-		return "aluno cadastrado.";
+		return "aluno cadastrado";
+
 	}
 
 }

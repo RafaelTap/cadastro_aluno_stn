@@ -1,39 +1,35 @@
 package com.outlook.rafael_taparica.entity;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.AUTO;
 
 @Entity
-@Table(schema = "cadastro_aluno_stn")
-public class Endereco implements Serializable {
-
-	private static final long serialVersionUID = 1L;
+@Table(name = "endereco")
+public class Endereco {
 
 	@Id
-	@GeneratedValue(strategy = AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idEndereco;
-	
+
 	@Column
 	private String logradouro;
-	
+
 	@Column
 	private int numero;
-	
+
 	@Column
 	private String cep;
-	
+
 	@Column
 	private String complemento;
-	
+
 	@Column
 	private String cidade;
-	
+
 	@Column
 	private String UF;
 

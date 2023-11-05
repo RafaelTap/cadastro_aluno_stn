@@ -1,34 +1,29 @@
 package com.outlook.rafael_taparica.entity;
 
-import static javax.persistence.GenerationType.AUTO;
-
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(schema = "cadastro_aluno_stn")
-public class Responsavel implements Serializable {
-
-	private static final long serialVersionUID = 1L;
+@Table(name = "responsavel")
+public class Responsavel {
 
 	@Id
-	@GeneratedValue(strategy = AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idResponsavel;
-	
+
 	@Column
 	private String nome;
-	
+
 	@Column
 	private String cpf;
-	
+
 	@Column
 	private String email;
-	
+
 	@Column
 	private String telefone;
 
