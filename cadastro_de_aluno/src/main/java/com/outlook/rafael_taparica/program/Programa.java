@@ -31,11 +31,15 @@ public class Programa {
 		
 		//dao.atualizarTelefone(3, "21990045543");
 		
-		//dao.listaDeAlunos();
+		
+		
+		// dao.listaDeAlunos();
 		
 		//dao.adicionarResponsavel("Marcos de Souza", "23464538091", "msouza@mail.com", "21965847463", 10);
-		//dao.adicionarResponsavel("Marina Mendes", "22347566912", "marinam@mail.com", "21977546445", 11);
-		
+		//
+
+		dao.adicionarEndereco("Rua Renato Meira Lima", 917, "22735120", "casa", "Rio de janeiro", "RJ", 1);
+		dao.adicionarEndereco("Rua Henrique costa", 911, "22786230", "apt 202, bl 3", "Rio de janeiro", "RJ", 11);
 		
 	}
 

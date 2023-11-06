@@ -28,7 +28,7 @@ public class Responsavel {
 	private String telefone;
 
 	@Column
-	int aluno_idAluno;
+	int aluno_idAluno1;
 
 	public int getIdResponsavel() {
 		return idResponsavel;
@@ -71,11 +71,11 @@ public class Responsavel {
 	}
 
 	public int getAluno_idAluno() {
-		return aluno_idAluno;
+		return aluno_idAluno1;
 	}
 
-	public void setAluno_idAluno(int aluno_idAluno) {
-		this.aluno_idAluno = aluno_idAluno;
+	public void setAluno_idAluno(int aluno_idAluno1) {
+		this.aluno_idAluno1 = aluno_idAluno1;
 	}
 
 }

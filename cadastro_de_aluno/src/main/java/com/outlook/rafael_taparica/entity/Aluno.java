@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -29,6 +31,14 @@ public class Aluno {
 
 	@Column
 	private String dataNascimento;
+	
+	@OneToOne 
+	@JoinColumn (name = "aluno_idAluno")
+	private Endereco endereco;
+	
+	@OneToOne
+	@JoinColumn (name = "aluno_idAluno1")
+	private Responsavel responsavel;
 
 	public int getIdAluno() {
 		return idAluno;
@@ -77,5 +87,15 @@ public class Aluno {
 	public void setDataNascimento(String dataNascimento2) {
 		this.dataNascimento = dataNascimento2;
 	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public Responsavel getResponsavel() {
+		return responsavel;
+	}
+	
+	
 
 }
