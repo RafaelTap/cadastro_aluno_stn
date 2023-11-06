@@ -5,14 +5,12 @@ import java.util.List;
 import javax.persistence.EntityManager;
 
 import com.outlook.rafael_taparica.entity.Aluno;
-import com.outlook.rafael_taparica.entity.Endereco;
-import com.outlook.rafael_taparica.entity.Responsavel;
 
-public class Helper {
+public class AlunoHelper {
 
 	private EntityManager em;
 
-	public Helper(EntityManager em) {
+	public AlunoHelper(EntityManager em) {
 		this.em = em;
 	}
 
@@ -98,38 +96,4 @@ public class Helper {
 
 	}
 
-	// método relacionado ao responsável. //
-
-	public void adicionarResponsavel(String nome, String cpf, String emil, String telefone, int aluno_idAluno) {
-
-		Responsavel responsavel = new Responsavel();
-		responsavel.setNome(nome);
-		responsavel.setCpf(cpf);
-		responsavel.setEmail(emil);
-		responsavel.setTelefone(telefone);
-		responsavel.setAluno_idAluno(aluno_idAluno);
-
-		em.getTransaction().begin();
-		em.persist(responsavel);
-		em.getTransaction().commit();
-
-	}
-
-	// método relacionado ao endereço //
-
-	public void adicionarEndereco(String logradouro, int numero, String cep, String complemento, String cidade, String UF, int aluno_idAluno) {
-		
-		Endereco endereco = new Endereco();
-		endereco.setLogradouro(logradouro);
-		endereco.setNumero(numero);
-		endereco.setCep(cep);
-		endereco.setComplemento(complemento);
-		endereco.setCidade(cidade);
-		endereco.setUF(UF);
-		endereco.setAluno_idAluno(aluno_idAluno);
-		
-		em.getTransaction().begin();
-		em.persist(endereco);
-		em.getTransaction().commit();
-	}
 }
